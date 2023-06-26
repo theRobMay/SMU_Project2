@@ -45,7 +45,10 @@ CREATE TABLE "Campaign" (
     "subcategory_id" varchar(8)   NOT NULL,
     CONSTRAINT "pk_Campaign" PRIMARY KEY (
         "cf_id"
-     )
+     ),
+    CONSTRAINT "uc_Campaign_contact_id" UNIQUE (
+        "contact_id"
+    )
 );
 
 ALTER TABLE "Subcategory" ADD CONSTRAINT "fk_Subcategory_subcategory_id" FOREIGN KEY("subcategory_id")
@@ -54,6 +57,6 @@ REFERENCES "Campaign" ("subcategory_id");
 ALTER TABLE "Category" ADD CONSTRAINT "fk_Category_category_id" FOREIGN KEY("category_id")
 REFERENCES "Campaign" ("category_id");
 
-ALTER TABLE "Campaign" ADD CONSTRAINT "fk_Campaign_contact_id" FOREIGN KEY("contact_id")
-REFERENCES "Contacts" ("contact_id");
+ALTER TABLE "Contacts" ADD CONSTRAINT "fk_Contacts_contact_id" FOREIGN KEY("contact_id")
+REFERENCES "Campaign" ("contact_id");
 
