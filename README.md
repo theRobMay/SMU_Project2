@@ -11,9 +11,10 @@ The core concept of this project was to create a ETL pipeline to accomplish this
 
 - The third is a workbook which then pulls down the information from our locally hosted postgres SQL and querys it to plot a graph, in this case displaying the most popular catagory of crowdfunded project by total backer count.
 
-
+![Graph](https://github.com/theRobMay/SMU_Project2/assets/90429579/44f0a967-ffe2-4579-828d-9a07f6ecdd18)
 
 ![multiple conditions query](https://github.com/theRobMay/SMU_Project2/assets/90429579/8f1aae12-d6c9-45fa-ad0c-500931aedffe)
+
 
 
 
